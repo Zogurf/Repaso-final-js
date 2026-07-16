@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+}
+
+.tarjeta {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 20px;
+    text-align: center;
+}
+
+.tarde {
+    color: red;
+}
+
+.presente {
+    color: green;
+}

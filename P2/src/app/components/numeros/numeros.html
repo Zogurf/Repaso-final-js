@@ -1,0 +1,29 @@
+<a> Lista de numeros {{vistaActual}}:</a>
+
+<div *ngIf="vistaActual == 'pares'">
+    <div class="container">
+        <div *ngFor="let numero of numeros">
+            <div *ngIf="numero %2 == 0" > 
+                <div class="tarjeta" [ngClass]="{'grande': numero > 20}">
+                    <p> {{numero}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="vistaActual == 'impares'">
+    <div class="container">
+        <div *ngFor="let numero of numeros">
+            <div *ngIf="numero % 2 != 0" > 
+                <div class="tarjeta" [ngClass]="{'grande': numero > 20}">
+                    <p> {{numero}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p> El promedio general de los numeros es: {{promedio().toFixed(2)}}</p>
+</div>

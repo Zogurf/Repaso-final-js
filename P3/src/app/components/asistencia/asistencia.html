@@ -1,0 +1,30 @@
+
+<div *ngIf="vistaActual == 'teoria'">
+    <div class="container">
+        <div *ngFor="let alumno of alumnos">
+            <div class="tarjeta" [ngClass]="{'tarde': alumno.estado == 'tarde', 'presente': alumno.estado == 'presente'}">
+                <p> {{alumno.nombre }}</p>
+                <div *ngIf="alumno.estado == 'tarde'">
+                    Tardanza
+                    <button> Justificar </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="vistaActual == 'laboratorio'">
+    <div class="container">
+        <div *ngFor="let alumno of alumnos">
+            <div class="tarjeta" [ngClass]="{'tarde': alumno.estado == 'tarde', 'presente': alumno.estado == 'presente'}">
+                <p> {{alumno.nombre }}</p>
+                <div *ngIf="alumno.estado == 'tarde'">
+                    Tardanza
+                    <button> Justificar </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p> {{calcularTardanzas()}} </p>

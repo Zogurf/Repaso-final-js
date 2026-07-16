@@ -1,0 +1,20 @@
+.footer {
+    bottom: 0;
+    position: fixed;
+}
+
+.container {
+    display: flex;
+}
+
+.tarjeta {
+    width: 50px;
+    border: 1px solid black;
+    margin: 50px;
+    text-align: center;    
+}
+
+.grande {
+    font-weight: bold;
+    font-size: 20px;
+}
